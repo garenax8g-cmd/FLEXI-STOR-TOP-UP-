@@ -1,0 +1,47 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f1226; color: #f2f3ff; line-height: 1.4;
+}
+.top {
+  text-align: center; padding: 28px 16px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+.top h1 { font-size: 1.8rem; }
+main { max-width: 760px; margin: 0 auto; padding: 16px; }
+.card {
+  background: #1a1f3d; border-radius: 14px; padding: 16px; margin-bottom: 16px;
+}
+.card h2 { font-size: 1.1rem; margin-bottom: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.item {
+  background: #252b52; border: 2px solid transparent; border-radius: 12px;
+  padding: 14px 10px; text-align: center; cursor: pointer; transition: .15s;
+}
+.item:hover { transform: translateY(-2px); }
+.item.active { border-color: #ffd34d; background: #2f3768; }
+.item .emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
+.item small { opacity: .75; display: block; }
+.price { color: #ffd34d; font-weight: 700; }
+input {
+  width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 10px;
+  border: 1px solid #3a4180; background: #0f1226; color: #fff; font-size: 1rem;
+}
+.info { margin: 12px 0; font-size: .92rem; opacity: .9; }
+.total { font-size: 1.2rem; margin: 10px 0; }
+.btn {
+  width: 100%; padding: 14px; border: 0; border-radius: 12px; cursor: pointer;
+  font-size: 1.05rem; font-weight: 700; color: #111;
+  background: linear-gradient(90deg, #ffd34d, #ff9d2f);
+}
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,.7);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+.modal[hidden] { display: none; }
+.modal-box { background: #1a1f3d; border-radius: 14px; padding: 20px; max-width: 420px; width: 100%; }
+.modal-box h3 { margin-bottom: 10px; }
+.modal-box #modalBody { margin-bottom: 14px; font-size: .95rem; }
+.modal-box .row { margin-bottom: 8px; }
+footer { text-align: center; padding: 20px; font-size: .8rem; opacity: .6; }

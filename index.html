@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magasin de recharge – Diamants & Pièces</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>💎 Magasin de recharge</h1>
+    <p>Diamants et pièces pour tes jeux préférés</p>
+  </header>
+
+  <main>
+    <!-- Étape 1 : jeu -->
+    <section class="card">
+      <h2>1. Choisis ton jeu</h2>
+      <div id="games" class="grid"></div>
+    </section>
+
+    <!-- Étape 2 : pack -->
+    <section class="card" id="step-packs" hidden>
+      <h2>2. Choisis ton pack</h2>
+      <div id="packs" class="grid"></div>
+    </section>
+
+    <!-- Étape 3 : ID joueur -->
+    <section class="card" id="step-player" hidden>
+      <h2>3. Ton ID de joueur</h2>
+      <input id="playerId" type="text" placeholder="Ex : 123456789" autocomplete="off">
+      <input id="contact" type="text" placeholder="Téléphone ou email (pour la confirmation)" autocomplete="off">
+    </section>
+
+    <!-- Étape 4 : paiement -->
+    <section class="card" id="step-pay" hidden>
+      <h2>4. Mode de paiement</h2>
+      <div id="methods" class="grid methods"></div>
+      <div id="payInfo" class="info"></div>
+      <div class="total">Total : <strong id="total">0 $</strong></div>
+      <button id="payBtn" class="btn" disabled>Payer maintenant</button>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+      <button class="btn" id="modalClose">Fermer</button>
+    </div>
+  </div>
+
+  <footer>© Magasin de recharge — Les noms de jeux appartiennent à leurs propriétaires.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
